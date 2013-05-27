@@ -37,9 +37,6 @@
 	SET STATUS BAR ON
 	SET SAFETY OFF
 
-
-	SET CLASSLIB TO class\boost.vcx ADDITIVE
-	
 	_vfp.Visible = .f.
 	
 	DO FORM forms\frmMain
@@ -47,7 +44,7 @@
 	READ EVENTS
 
 
-	IF "vfp9.exe" $ LOWER(vfp.ServerName)
+	IF "vfp9.exe" $ LOWER(_vfp.ServerName)
 		_vfp.Visible = .t.
 		SET TALK ON
 	ENDIF
